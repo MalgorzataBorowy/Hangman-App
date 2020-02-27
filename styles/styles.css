@@ -56,3 +56,17 @@ p {
 .button:hover {
     background: #5F3A87;
 }
+
+.dropdown {
+    border-radius: 0;
+    border: 1px solid #DEDFE0;
+    background: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    height: 3rem;
+    width: 4rem;
+    margin-right: .8rem;
+    margin-left: .8rem;
+    margin-top: .8rem;
+    margin-bottom: .8rem;
+}
