@@ -7,7 +7,7 @@ const createOption = (start,end,className) => {
     for(let i=start; i<end; i++) {
         const numb = document.createElement('option')
         numb.value = `${i}`
-        numb.class = 'option-number'
+        numb.classList.add('dropdown')
         numb.textContent = `${i}`
         document.querySelector(className).appendChild(numb)
     }
@@ -43,6 +43,7 @@ const keyLayout = [
 ]
 
 const keyboardKeys = document.createElement('div')
+keyboardKeys.classList.add('keyboard__keys')
 
 keyLayout.forEach((key => {
     const keyElement = document.createElement("button");

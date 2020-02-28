@@ -38,7 +38,16 @@ p {
 
 .puzzle {
     display: flex;
-    margin-bottom: 2.8rem;
+    margin-bottom: 1.8rem;
+}
+
+.box {
+    clear: both;
+    margin-bottom: 30px;
+}
+
+.box1 {
+    float: left;
 }
 
 .button {
@@ -60,11 +69,12 @@ p {
 .dropdown {
     border-radius: 0;
     border: 1px solid #DEDFE0;
-    background: white;
+    background: rgb(238, 235, 238);
     font-size: 1.4rem;
-    font-weight: 300;
-    height: 3rem;
-    width: 4rem;
+    font-weight: 400;
+    color: #7044a0;
+    height: 50%;
+    width: 30%;
     margin-right: .8rem;
     margin-left: .8rem;
     margin-top: .8rem;
@@ -74,6 +84,7 @@ p {
 .keyboard__keys {
     text-align: center;
     align-items: center;
+    float: left;
 }
 
 .keyboard__key {
@@ -85,7 +96,7 @@ p {
     border: none;
     background: rgba(255, 255, 255, 0.2);
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     outline: none;
     cursor: pointer;
     display: inline-flex;
