@@ -83,5 +83,3 @@ const startGame = async () => {
 }
 
 startGame()
-
-document.querySelector('#reset').addEventListener('click', startGame)

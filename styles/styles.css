@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    align-content: center;
+    text-align: center;
 }
 
 html {
@@ -9,14 +11,44 @@ html {
 }
 
 body {
-    background: #2B292E;
-    color: #fafafa;
+    color: #e4eaf1;
+    background: #2d283e;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.6rem;
+    /* max-width: 650px; */
+    width: 100%;
+    margin: auto;
+
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     min-height: 100vh;
+}
+
+.main-content {
+    flex-grow: 1;
+    margin: 0 auto;
+}
+
+header {
+    background: #7044a0;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding: 2.1rem 0;
+    box-shadow: 2px 0px 12px #564f6f;
+}
+
+footer {
+    color: #b2b5b9;
+    font-size: 1.5rem;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 16px;
+    margin: 0 16px;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
 }
 
 span {
@@ -31,31 +63,28 @@ span {
     width: 2.4rem;
 }
 
-p {
-    font-weight: 300;
-    margin-bottom: .8rem;
-}
-
 .puzzle {
     display: flex;
-    margin-bottom: 1.8rem;
+    margin: auto 1.8rem;
+    padding: 2rem 5px;
 }
 
 .box {
-    clear: both;
     margin-bottom: 30px;
 }
 
 .box1 {
     float: left;
+    text-align: left;
 }
 
 .button {
     background: #7044a0;
+    color: #ffffff;
     border: none;
-    border-bottom: 2px solid #efeef1;
+    border-radius: 4px;
+    min-width: 70px;
     cursor: pointer;
-    color: white;
     font-size: 1.4rem;
     font-weight: 300;
     padding: .8rem;
@@ -67,12 +96,12 @@ p {
 }
 
 .dropdown {
-    border-radius: 0;
+    border-radius: 2px;
     border: 1px solid #DEDFE0;
     background: rgb(238, 235, 238);
     font-size: 1.4rem;
     font-weight: 400;
-    color: #7044a0;
+    color: #2d283e;
     height: 50%;
     width: 30%;
     margin-right: .8rem;
@@ -94,7 +123,7 @@ p {
     margin: 3px;
     border-radius: 4px;
     border: none;
-    background: rgba(255, 255, 255, 0.2);
+    background: #564f6f;
     color: #ffffff;
     font-size: 1.8rem;
     outline: none;
@@ -106,6 +135,10 @@ p {
     padding: 0;
     -webkit-tap-highlight-color: transparent;
     position: relative;
+}
+
+.keyboard__key:hover {
+    background: #7e75a3
 }
 
 .keyboard__key:active {
