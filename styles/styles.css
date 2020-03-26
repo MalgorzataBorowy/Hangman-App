@@ -15,7 +15,7 @@ body {
     background: #2d283e;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.6rem;
-    /* max-width: 650px; */
+    min-width: 360px;
     width: 100%;
     margin: auto;
 
@@ -27,6 +27,7 @@ body {
 .main-content {
     flex-grow: 1;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 header {
@@ -70,12 +71,13 @@ span {
 }
 
 .box {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .box1 {
     float: left;
     text-align: left;
+    margin: 10px 0;
 }
 
 .button {
@@ -114,6 +116,7 @@ span {
     text-align: center;
     align-items: center;
     float: left;
+    margin: 10px 0;
 }
 
 .keyboard__key {
