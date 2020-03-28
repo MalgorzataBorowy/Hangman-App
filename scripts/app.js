@@ -14,7 +14,7 @@ const createOption = (start,end,className) => {
 }
 
 // Creating option for selector- words number
-createOption(1,10,'#word-number')
+createOption(1,5,'#word-number')
 let wordsNumber = 1
 
 document.querySelector('#word-number').addEventListener('change',(ev) => {
@@ -45,7 +45,7 @@ const keyLayout = [
 const keyboardKeys = document.createElement('div')
 keyboardKeys.classList.add('keyboard__keys')
 
-keyLayout.forEach((key => {
+keyLayout.forEach(key => {
     const keyElement = document.createElement("button");
     const insertLineBreak = ["p", "l"].indexOf(key) !== -1;
     keyElement.setAttribute("type", "button");
@@ -53,14 +53,13 @@ keyLayout.forEach((key => {
     keyElement.textContent = key
     keyboardKeys.appendChild(keyElement)
     if (insertLineBreak) {
-        keyboardKeys.appendChild(document.createElement("br"));
+        keyboardKeys.appendChild(document.createElement('br'))
     }
     keyElement.addEventListener("click", (ev) => {
         firstGame.makeGuess(ev.target.textContent)
         render()
-        console.log(ev.target.textContent)
     })
-}))
+})
 
 document.querySelector('#keyboard-keys').appendChild(keyboardKeys)
 
@@ -69,10 +68,28 @@ document.querySelector('#keyboard-keys').appendChild(keyboardKeys)
 const render = () => {
     puzzleEl.innerHTML = ''
     guessesEl.textContent = firstGame.statusMessage
+    let nextLine = 0
     firstGame.puzzle.split('').forEach((letter) => {
-        const letterElem = document.createElement('span')
-        letterElem.textContent = letter
-        puzzleEl.appendChild(letterElem)
+        nextLine +=1
+        if (nextLine>9) {
+            console.log('Przerwa')
+            if (letter === ' ') {
+                puzzleEl.appendChild(document.createElement('br'))                       
+            } else {
+                const myslnik = document.createElement('span')
+                myslnik.textContent = '-'
+                puzzleEl.appendChild(myslnik)
+                puzzleEl.appendChild(document.createElement('br')) 
+                const letterElem = document.createElement('span')
+                letterElem.textContent = letter
+                puzzleEl.appendChild(letterElem)      
+            }
+            nextLine = 0    
+        } else {
+            const letterElem = document.createElement('span')
+            letterElem.textContent = letter
+            puzzleEl.appendChild(letterElem)            
+        }
     })
 }
 

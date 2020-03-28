@@ -4,36 +4,43 @@
         <title>Hangman</title>
         <link href="/styles/styles.css" rel="stylesheet">
         <link href="images/favicon.png"rel="icon">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <header class="header">
-            <h1>Hangman Game</h1>
-        </header>
-        <div class="main-content">
-            <div class="box">
-                <div id="puzzle" class="puzzle"></div>
-                <p id="guesses"></p>
-            </div>
-            <div class="box1">
-                <div class="options">
-                    <div>
-                        Words:
-                        <select id="word-number" class="dropdown"></select>
+        <img class="wave" src="images/wave.png">
+            <div class="container">
+                <div class="img">
+                    <img src="images/bg.svg">
+                </div>
+                <div class="main-content">
+                    <div class="main">
+                        <h2 class="title">Hangman</h2>
+                        <div class="options">
+                            <div class="input">
+                                Words:
+                                <select id="word-number" class="dropdown"></select>
+                                <span class="space"></span>Mistakes:
+                                <select id="mistakes-number" class="dropdown"></select>
+                            </div>
+
+                            <button id="reset" class="button">Reset</button>
+                        </div>
+                        <div class="box">
+                            <div id="puzzle" class="puzzle"></div>
+                            <p id="guesses"></p>
+                        </div>
+
+                        <div id="keyboard-keys" class="keyboard__keys"></div>  
                     </div>
-                    <div>
-                        Mistakes:
-                        <select id="mistakes-number" class="dropdown"></select>
-                    </div>
-                    <button id="reset" class="button">Reset</button>
+                    
                 </div>
             </div>
-            <div id="keyboard-keys" class="keyboard__keys"></div>
-            <script src="/scripts/requests.js"></script>
-            <script src="/scripts/hangman.js"></script>
-            <script src="/scripts/app.js"></script>
-        </div>
-        <footer>Created by M.B.</footer>
+        
+        <script src="/scripts/requests.js"></script>
+        <script src="/scripts/hangman.js"></script>
+        <script src="/scripts/app.js"></script>
         
     </body>
 
